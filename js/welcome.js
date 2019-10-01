@@ -9,7 +9,6 @@ function limit(){
 function mFunction(v) { 
     for (i=0; i<v; i++)
     {
-        //person[i] = prompt("Enter  the numbers");
         person[i] = Math.floor(Math.random() * 10);
     }
 
@@ -17,23 +16,24 @@ function mFunction(v) {
 
 
 
-    var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+    var x = setInterval(function() {
+
+    
+    var now = new Date().getTime();
 
 
-var x = setInterval(function() {
+    var distance = 5-now;
 
-  
-  var now = new Date().getTime();
+    
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "Time Up";
+            document.getElementById("abcd").style.visibility = "visible";
+        }
+    }, 5000);
 
-
-  var distance = 5-now;
-
-  
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Time Up";
-  }
-}, 5000);
+    //document.getElementById("abcd").style.visibility = "visible";
+    document.getElementById("abc").disabled=true;
 
 
 }
@@ -42,7 +42,7 @@ function myFunction(){
     for (i=0; i<n; i++)
     {
                         
-        person1[i] = prompt("Enter the sequence numbers");
+        person1[i] = prompt("Enter the sequence number:"+(i+1));
     }
     var nw;
     nw=0;
@@ -55,7 +55,12 @@ function myFunction(){
     if(nw>0){
         alert("Sequence not Correct");
     }
+    else{
+        alert("Sequence Correct");
+    }
 
-    document.getElementById("demo").innerHTML =person;
+    document.getElementById("demo").innerHTML ="Random Sequence was:    "+person;
+    document.getElementById("demo1").innerHTML ="Your Input Sequence is:  "+person1;
+    document.getElementById("abcd").disabled=true;
     
 }

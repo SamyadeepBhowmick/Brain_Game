@@ -8,25 +8,25 @@
 
         <title>Brain Game</title>
     </head>
-    <body>
-        <h1 class="text-center">Let's Play a Memory Game</h1>
+    <body style="background-color: #F5F5F5;">
+        <h1 class="text-center p-5"><b>Let's Play a Memory Game</b></h1>
 
-        <div class="d-flex flex-row bd-highlight mb-3">
-            <div class="p-2 bd-highlight text-center"><button type="button" class="btn btn-outline-primary" id="abc" onclick="limit()">Insert Limit</button></div>
-            <div class="p-2 bd-highlight text-center"><button type="button" class="btn btn-outline-primary" id="abcd" onclick="myFunction()">Insert Numbers</button></div>
-            <div class="p-2 bd-highlight text-center"><p id="demo"></p></div>
-        </div>
-        <p>
-            This is a game where one has to enter the limit.According to the limit, a sequence of numbers will be generated.</br>Then we have to memorise the
-            sequence in 5 seconds.After that we will insert the numbers one by one in the pop up box and an aleat will be triggered to inform whether the input 
-            sequence is correct.
-        </p>
-
-
-            
-            
-
-            
+        
+        <p class="p-2 bd-highlight text-center"><button type="button" class="btn btn-outline-primary btn-lg" id="abc" onclick="limit()">Insert Limit</button></p>
+        <p class="p-2 bd-highlight text-center"><h3 id="demo" class="text-center"></h3></p>
+        <p class="p-2 bd-highlight text-center"><h3 id="demo1" class="text-center"></h3></p>
+        <p class="p-2 bd-highlight text-center"><button type="button" class="btn btn-outline-primary btn-lg" style="visibility: hidden;" id="abcd" onclick="myFunction()">Insert Numbers</button></p>
+        
+    
+        <ul class="p-5 mb-3" type="circle">
+            <h3 class=" p-3 display-4">Rules</h3>
+            <li class=" p-2" style="font-family:'Courier New', Courier, monospace;">This is a game where one has to enter the limit.</li>
+            <li class=" p-2" style="font-family:'Courier New', Courier, monospace;">According to the limit, a sequence of numbers will be generated between 0 and 9.</li>
+            <li class=" p-2" style="font-family:'Courier New', Courier, monospace;">We have to memorise the sequence before it disappears in 5 seconds.</li>
+            <li class=" p-2" style="font-family:'Courier New', Courier, monospace;">We will insert the correct sequence one by one in the pop up box.</li>
+            <li class=" p-2" style="font-family:'Courier New', Courier, monospace;">An aleat will be triggered to inform whether the input sequence is correct.</li>
+        </ul>
+   
             
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
